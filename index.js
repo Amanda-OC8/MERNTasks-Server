@@ -23,12 +23,6 @@ app.use('/api/projects', require('./routes/project'))
 app.use('/api/tasks', require('./routes/task'))
 
 
-//Define the page index
-
-app.get('/', (req, res) => {
-    res.send('Holi')
-} )
-
 app.listen(PORT, () => {
     console.log(`The server is on port ${PORT}`)
 })
