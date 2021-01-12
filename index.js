@@ -14,7 +14,7 @@ app.use(cors())
 //Express.json
 app.use(express.json({extended: true}))
 
-const PORT = process.env.PORT || 4000
+const port = process.env.PORT || 4000
 
 //Import routes
 app.use('/api/users', require('./routes/users'))
@@ -22,13 +22,6 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/projects', require('./routes/project'))
 app.use('/api/tasks', require('./routes/task'))
 
-
-//Define the page index
-
-app.get('/', (req, res) => {
-    res.send('Holi')
-} )
-
-app.listen(PORT, () => {
-    console.log(`The server is on port ${PORT}`)
-})
+app.listen(port, '0.0.0.0', () => {
+    console.log(`The server is on port ${port}`);
+});
